@@ -16,7 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const childPasses = parseInt(queryParams.ninos) || 0;
 
     document.getElementById('guest-name').textContent = guestName;
-    
+
+    // Determine the type of invitation based on the number of passes
+    if (adultPasses > 1 || (adultPasses === 1 && childPasses > 0) || childPasses > 1) {
+        document.getElementById('guest-type').textContent = ' invitados';
+    } else if (adultPasses === 1 && childPasses === 0) {
+        document.getElementById('guest-type').textContent = ' invitado';
+    } else if (adultPasses === 0 && childPasses === 1) {
+        document.getElementById('guest-type').textContent = ' invitada';
+    } else if (adultPasses === 1 && childPasses === 1) {
+        document.getElementById('guest-type').textContent = ' invitado e invitada';
+    }
+
     if (adultPasses > 0) {
         document.getElementById('adult-info').textContent = ` ${adultPasses} adulto(s)`;
     }
