@@ -17,22 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('guest-name').textContent = guestName;
 
-    // Determine the type of invitation based on the number of passes
-    if (adultPasses > 1 || (adultPasses === 1 && childPasses > 0) || childPasses > 1) {
-        document.getElementById('guest-type').textContent = ' invitados';
-    } else if (adultPasses === 1 && childPasses === 0) {
-        document.getElementById('guest-type').textContent = ' invitado';
-    } else if (adultPasses === 0 && childPasses === 1) {
-        document.getElementById('guest-type').textContent = ' invitada';
-    } else if (adultPasses === 1 && childPasses === 1) {
-        document.getElementById('guest-type').textContent = ' invitado e invitada';
+    if (adultPasses > 0) {
+        document.getElementById('adult-info').textContent = `${adultPasses} adulto(s)`;
+    } else {
+        document.getElementById('adult-info').style.display = 'none';
     }
 
-    if (adultPasses > 0) {
-        document.getElementById('adult-info').textContent = ` ${adultPasses} adulto(s)`;
-    }
-    
     if (childPasses > 0) {
-        document.getElementById('child-info').textContent = ` ${childPasses} niño(s)`;
+        document.getElementById('child-info').textContent = `${childPasses} niño(s)`;
+    } else {
+        document.getElementById('child-info').style.display = 'none';
     }
 });
