@@ -11,11 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const queryParams = getQueryParams();
-    const guestName = queryParams.nombre || "Guest";
-    const adultPasses = queryParams.adultos || 0;
-    const childPasses = queryParams.ninos || 0;
+    const guestName = queryParams.nombre || "Invitado";
+    const adultPasses = parseInt(queryParams.adultos) || 0;
+    const childPasses = parseInt(queryParams.ninos) || 0;
 
     document.getElementById('guest-name').textContent = guestName;
-    document.getElementById('adult-passes').textContent = adultPasses;
-    document.getElementById('child-passes').textContent = childPasses;
+    
+    if (adultPasses > 0) {
+        document.getElementById('adult-info').textContent = ` ${adultPasses} adulto(s)`;
+    }
+    
+    if (childPasses > 0) {
+        document.getElementById('child-info').textContent = ` ${childPasses} niño(s)`;
+    }
 });

@@ -1,4 +1,3 @@
-
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
@@ -13,85 +12,38 @@ body {
 }
 
 /* Contenedor principal de la invitación */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .invitation {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%;
     max-width: 600px;
+    width: 100%;
 }
 
 /* Títulos y textos */
-h1 {
-    margin: 10px 0;
-    color: #2c3e50;
-}
-
-.text-primary-100 {
+.title {
+    font-family: 'Pacifico', cursive;
     color: #3498db;
+    margin: 10px 0;
 }
 
-/* Clases de fuentes personalizadas */
-.font-handwriting2 {
-    font-family: 'Pacifico', cursive; /* Puedes personalizar con tu fuente preferida */
+.subtitle {
+    font-family: 'Merriweather', serif;
+    color: #3498db;
+    margin: 10px 0;
 }
 
-.font-serif2 {
-    font-family: 'Merriweather', serif; /* Puedes personalizar con tu fuente preferida */
+.guest-info {
+    font-family: 'Georgia', serif;
+    margin: 10px 0;
 }
-
-.font-serif1 {
-    font-family: 'Georgia', serif; /* Puedes personalizar con tu fuente preferida */
-}
-
-/* Tamaños de texto responsivos */
-.text-3xl {
-    font-size: 1.875rem; /* 30px */
-}
-
-.text-4xl {
-    font-size: 2.25rem; /* 36px */
-}
-
-.text-5xl {
-    font-size: 3rem; /* 48px */
-}
-
-.text-2xl {
-    font-size: 1.5rem; /* 24px */
-}
-/* Ajuste de padding */
-.sm\\:p-5 {
-    padding: 1.25rem;
-}
-
-.p-5 {
-    padding: 1.25rem;
-}
-
-/* Clases flex y grid */
-.flex {
-    display: flex;
-}
-
-.grid {
-    display: grid;
-}
-
-.grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-/* Alineación y centrado */
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.content-center {
-    align-content: center;
-}
-
 
